@@ -19,4 +19,11 @@ $(document).ready(function () {
 		$("#question3").show();
 	});
 
+	$("form#question3").submit(function (e) {
+		e.preventDefault();
+
+		$("#question3").hide();
+		$("#question4").show();
+	});
+
 });
