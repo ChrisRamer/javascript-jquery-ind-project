@@ -1,15 +1,26 @@
 body {
 	background-color: rgb(54, 54, 54);
-	color: rgb(141, 20, 255);
+	color: rgb(166, 71, 255);
 	text-align: center;
 }
 
 #quiz {
 	display: none;
+	background-color: rgb(106, 177, 243);
 	margin: 0;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
+}
+
+#question2 {
+	display: none;
+}
+
+.form-control {
+	background-color: rgb(166, 71, 255);
+	color: rgb(106, 177, 243);
+	font-weight: bold;
 }
