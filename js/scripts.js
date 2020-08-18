@@ -12,4 +12,11 @@ $(document).ready(function () {
 		$("#question2").show();
 	});
 
+	$("form#question2").submit(function (e) {
+		e.preventDefault();
+
+		$("#question2").hide();
+		$("#question3").show();
+	});
+
 });
