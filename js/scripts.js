@@ -48,24 +48,32 @@ $(document).ready(function () {
 		$("#result").hide();
 
 		// Fade result text & cycle through texts
-		$("#result").text("Please wait while this super powerful AI accurately predicts the best language for you......").fadeIn(5000, function() {
+		$("#result").text("Please wait while this super powerful AI accurately predicts the best language for you......").fadeIn(50, function() {
 			
 			$("#result").fadeOut(500, function() {
 
-				$("#result").text("This is taking awhile... It's a lot to process, I'm a new AI, it takes me time to learn....").fadeIn(5000, function() {
+				$("#result").text("This is taking awhile... It's a lot to process, I'm a new AI, it takes me time to learn....").fadeIn(50, function() {
 
 					$("#result").fadeOut(500, function () {
 						
-						$("#result").text("Oh wait.... I think the answer is near.....").fadeIn(5000, function () {
+						$("#result").text("Oh wait.... I think the answer is near.....").fadeIn(50, function () {
 
 							$("#result").fadeOut(500, function () { 
 								
-								$("#result").text("We're so close, I can taste it! Wait.. can an AI taste?").fadeIn(5000, function () {
+								$("#result").text("We're so close, I can taste it! Wait.. can an AI taste?").fadeIn(50, function () {
 
 									$("#result").fadeOut(500, function () {
 										
-									const answer = $("#question5Opts").val();
-									$("#result").text("This 100% accurate AI has determined based on your input that you should learn: " + answer + "! Hoorah!").fadeIn(5000);
+										let answer;
+
+										if ($("#question3Opts").val() === "Binary") {
+											answer = "Binary";
+										}
+										else {
+											answer = $("#question5Opts").val();
+										}
+
+										$("#result").text("This 100% accurate AI has determined based on your input that you should learn: " + answer + "! Hoorah!").fadeIn(5000);
 									});
 								});
 							});
