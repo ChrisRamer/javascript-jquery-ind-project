@@ -42,7 +42,8 @@ $(document).ready(function () {
 	$("form#question5").submit(function (e) { 
 		e.preventDefault();
 		
-		
+		const answer = $("#question5Opts").val();
+		alert("I think you should learn " + answer + "!");
 	});
 
 });
