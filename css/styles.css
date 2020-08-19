@@ -27,6 +27,10 @@ body {
 	display: none;
 }
 
+#question5{
+	display: none;
+}
+
 .form-control {
 	background-color: rgb(166, 71, 255);
 	color: rgb(106, 177, 243);
