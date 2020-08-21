@@ -48,32 +48,39 @@ $(document).ready(function () {
 		$("#result").hide();
 
 		// Fade result text & cycle through texts
-		$("#result").text("Please wait while this super powerful AI accurately predicts the best language for you......").fadeIn(5000, function() {
+		$("#result").text("Please wait while this super powerful AI accurately predicts the best language for you......").fadeIn(500, function() {
 			
 			$("#result").fadeOut(500, function() {
 
-				$("#result").text("This is taking awhile... It's a lot to process, I'm a new AI, it takes me time to learn....").fadeIn(5000, function() {
+				$("#result").text("This is taking awhile... It's a lot to process, I'm a new AI, it takes me time to learn....").fadeIn(500, function() {
 
 					$("#result").fadeOut(500, function () {
 						
-						$("#result").text("Oh wait.... I think the answer is near.....").fadeIn(5000, function () {
+						$("#result").text("Oh wait.... I think the answer is near.....").fadeIn(500, function () {
 
 							$("#result").fadeOut(500, function () { 
 								
-								$("#result").text("We're so close, I can taste it! Wait.. can an AI taste?").fadeIn(5000, function () {
+								$("#result").text("We're so close, I can taste it! Wait.. can an AI taste?").fadeIn(500, function () {
 
 									$("#result").fadeOut(500, function () {
 										
-										let answer;
-
-										if ($("#question3Opts").val() === "Binary") {
-											answer = "Binary";
+										// If user likes cats, give them cat and obviously cats like 
+										if ($("#question1Opts").val() === "Meow" && $("#question3Opts").val() == "Kitten") {
+											$("#result").text("OMG you like cats too?! I LOVE cats! I'm such a cat AI!. Since you love cats so much, the obvious language for you is Swift because cats are swift like the wind! Also look into LOLCODE, that would be another good language ;)").fadeIn(500);
+											$("#cat").fadeIn(500);
+										}
+										else if ($("#question1Opts").val() === "Woof" && $("#question2Opts").val() === "Bork bork") {
+											$("#result").text("OMG you like dogs too?! I LOVE dogs! I'm such a dog AI! Since you love dogs so much, the obvious language for you is Go because dogs like to go play!").fadeIn(500);
+											$("#dog").fadeIn(500);
+										}
+										else if ($("#question3Opts").val() === "Binary" || $("#question4Opts").val() == "Binary (Vanilla & Chocolate)") {
+											const answer = "Binary";
+											$("#result").text("This 100% accurate AI has determined based on your input that you should learn: " + answer + "! Hoorah!").fadeIn(500);
 										}
 										else {
-											answer = $("#question5Opts").val();
+											const answer = $("#question5Opts").val();
+											$("#result").text("This 100% accurate AI has determined based on your input that you should learn: " + answer + "! Hoorah!").fadeIn(500);
 										}
-
-										$("#result").text("This 100% accurate AI has determined based on your input that you should learn: " + answer + "! Hoorah!").fadeIn(5000);
 									});
 								});
 							});

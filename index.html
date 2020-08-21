@@ -28,15 +28,15 @@
 		<!-- Question 1 -->
 		<form id="question1">
 			<div class="form-group">
-				<p><strong>#1. Which of these Marvel/DC characters is your favorite?</strong></p>
+				<p><strong>#1. Which animal sound is the best?</strong></p>
 				<select class="form-control" id="question1Opts" style=" margin: 0 auto; width: 225px">
-					<option>Loki</option>
-					<option>Thor</option>
-					<option>Thanos</option>
-					<option>Joker</option>
-					<option>Batman</option>
-					<option>Spiderman</option>
-					<option>Deadpool</option>
+					<option>Moo</option>
+					<option>Woof</option>
+					<option id="answerCat" value="Meow">Meow</option>
+					<option>Oink</option>
+					<option>Chrip</option>
+					<option>Ribbit</option>
+					<option></option>
 				</select>
 			</div>
 			<button type="submit" class="btn" style="background-color: rgb(166, 71, 255); color: rgb(106, 177, 243)">Next question!</button>
@@ -54,7 +54,7 @@
 					<option>Bow</option>
 					<option>Master Sword</option>
 					<option>Pegasus Boots</option>
-					<option>Dominion Rod</option>
+					<option>Bork bork</option>
 				</select>
 			</div>
 			<button type="submit" class="btn" style="background-color: rgb(166, 71, 255); color: rgb(106, 177, 243)">Next question!</button>
@@ -70,7 +70,7 @@
 					<option>2</option>
 					<option>5</option>
 					<option>17</option>
-					<option>Kitten</option>
+					<option id="answerCat">Kitten</option>
 					<option>Don't know, don't care</option>
 					<option id="answerBinary" value="Binary">00110011</option>
 				</select>
@@ -89,7 +89,7 @@
 					<option>Cookies n' Cream</option>
 					<option>Mint Chocolate Chip</option>
 					<option>Butterfinger</option>
-					<option>Strawberry</option>
+					<option>Binary (Vanilla & Chocolate)</option>
 					<option>Squid (yes, this is a thing)</option>
 				</select>
 			</div>
@@ -122,6 +122,10 @@
 			<h1 id="result"></h1>
 		</div>
 	</div>
+
+	<img id="cat" src="img/cat.PNG" alt="Nyan Cat goes brrrr">
+	<img id="dog" src="img/dog.png" alt="Doge goes brrr" height="15%" width="15%">
+
 </body>
 
 </html>
